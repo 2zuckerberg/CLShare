@@ -1,0 +1,40 @@
+//
+//  CLShare.pch
+//  CLShare
+//
+//  Created by ClaudeLi on 16/5/4.
+//  Copyright © 2016年 ClaudeLi. All rights reserved.
+//
+
+#ifndef CLShare_pch
+#define CLShare_pch
+
+#import <UMSocial.h>
+#import "CLShareManager.h"
+
+// 测试 - AppKey
+
+// 友盟AppKey
+#define K_UM_AppKey      @"507fcab25270157b37000010"
+
+/*sina*/
+#define K_Sina_AppKey    @"3921700954"
+#define K_Sina_AppSecret @"04b48b094faeb16683c32669824ebdad"
+/*QQ*/
+#define K_QQ_AppId       @"100424468"
+#define K_QQ_AppKey      @"c7394704798a158208a74ab60104f0ba"
+/*微信*/
+#define K_WX_AppID       @"wxd930ea5d5a258f4f"
+#define K_WX_AppSecret   @"db426a9829e4b49a0dcac7b4162da6b6"
+
+#define K_Share_Url      @"http://www.umeng.com/social"
+
+
+// 重写NSLog，debug模式下打印行数
+#ifdef DEBUG
+#define NSLog(s, ... ) NSLog( @"[%@ in line %d]=>>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define NSLog(s, ... )
+#endif
+
+#endif /* CLShare_pch */
